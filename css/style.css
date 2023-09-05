@@ -1,0 +1,637 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/*Define una serie de variables de CSS personalizadas*/
+:root {
+    --gold1: #f34970;
+    --gold2: #f86486;
+    --pink:#ffb3c5;
+    --gray: #ffffff80;
+    --gray2: #f7d9d990;
+    --black1: #1a1b1f;
+    --black2: #30353b;
+    
+    /*Definición de sombra con desplazamiento y enfoque*/
+
+    /*arriba, derecha, izquierda y abajo y el último valor siempre hará referencia al difuminado*/
+    --shadow: 0 8px 8px;
+    --color_shadow: #00000033;
+}
+
+/*Selector Universal*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    /*Esta propiedad se encarga de ocultar los elementos*/
+    overflow: hidden;
+    padding: 100px 0;
+    height: auto;
+}
+
+.container--modifier {
+    width: 60%;
+}
+
+.hero {
+    width: 100%;
+    /*Altura minima del dispositivo*/
+    min-height: 100vh;
+    /*Establecer un fondo con un degradado lineal
+    
+    linear-gradient(180deg) se encarga de crear un degradado lineal horizontal de izquierda a derecha
+    
+    */
+    background: linear-gradient(180deg, var(--pink) 0%, var(--gold2) 100%);
+}
+
+.nav__hero {
+    color: #fff;
+    height: 70px;
+    border-bottom: 2px solid rgba(255, 255, 255);
+}
+
+.nav__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: inherit;
+    padding: 0;
+}
+
+.logo__name {
+    font-size: 24px;
+}
+
+.link {
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+    font-weight: 300;
+    padding: 10px;
+}
+
+.link--active {
+    color: var(--gold1);
+    font-weight: 700;
+}
+
+.point {
+    color: var(--gold1);
+}
+
+.hero__main {
+    height: calc(100vh - 70px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
+.mockup {
+    object-fit: cover;
+    width: 40%;
+    min-height: 90vh;
+}
+
+.hero__textos {
+    width: 48%;
+}
+
+.title {
+    font-size: 56px;
+    font-weight: 300;
+    color: white;
+}
+
+.title--active {
+    color: var(--gold1);
+    font-weight: 700;
+}
+
+.copy {
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.755);
+    margin: 15px 0;
+}
+
+.copy__active {
+    font-weight: 700;
+}
+
+.cta {
+    padding: 20px 30px;
+    display: inline-block;
+    background: linear-gradient(180deg,var(--pink),var(--gold2) 100%);
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    box-shadow: var(--gray);
+    border-radius: 6px;
+    
+}
+/*Inicia la Personalización de la Sección de Servicios*/
+.services{
+    background: #fafafa;
+}
+
+.subtitle{
+    font-size: 42px;
+    color:var(--gold1);
+    
+}
+
+.subtitle--modifier{
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.copy__section{
+    color: white;
+    font-size: 22px;
+    /*Nos permite especificar la línea de altura*/
+    line-height: 32px;
+    /*Nos permite especificar el margen inferior*/
+    margin-bottom: 60px;
+}
+
+.copy__section--modifier{
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.container-cards{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*Se encarga de ajustar el contenido en el sitio web*/
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 30%;
+    padding: 30px 0;
+    overflow: hidden;
+    background: linear-gradient(180deg, var(--pink) 0%, var(--gold1) 100%);
+    border-radius: 10px;
+    position: relative;
+    text-align: right;
+    margin-bottom: 60px;
+    /* Aplica una sombra al elemento utilizando la propiedad box-shadow */
+box-shadow: 0 0 6px var(--color_shadow);
+/*
+   - 0 0: Desplazamiento horizontal y vertical de la sombra, en este caso, no hay desplazamiento (sombra centrada).
+   - 6px: Radio de difuminado de la sombra, creando un efecto suave en un área de 6 píxeles alrededor del elemento.
+   - var(--color_shadow): Color de la sombra obtenido de la variable CSS --color_shadow.
+*/
+transition: transform 0.3s ease-in-out;
+/*permie hacer una transicion suave y bonita a la vista */
+
+}
+.card:hover{
+    transform: scale(1.05); 
+    /*hace que la carta aumente su tamano al ponerse encima de ella */
+}
+.card__img{
+    width: 95%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+}
+
+.cards__text{
+    text-align: left;
+    width: 90%;
+    margin:0 auto;
+}
+
+.card__list{
+    color: white;
+    font-weight: 700;
+    /* Establece márgenes en las direcciones superior, derecha, inferior e izquierda del elemento */
+margin: 25px 0 12px;
+/*
+   - 25px: Margen superior de 25 píxeles.
+   - 0: No se aplican márgenes en los lados derecho e izquierdo.
+   - 12px: Margen inferior de 12 píxeles.
+*/
+
+    font-size: 18px;
+}
+
+
+.card__title{
+    font-size: 40px;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.card__copy{
+    color: white;
+    margin-bottom: 16px;
+}
+
+.card__button{
+    display: block;
+    background: linear-gradient(19deg, var(--pink), var(--gold2) 100%);
+    border-radius: 6px;
+    text-decoration: none;
+    width: 100%;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    padding: 12px 0;
+}
+
+.container-bg{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.background{
+    width: 68%;
+    height: 290px;
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.background__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+.background__text{
+    position: absolute;
+    width: 100%;
+    bottom: 75px;
+    left: 15px;
+    color: #fff;
+}
+
+.background__title{
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+
+.testimony{
+    background:linear-gradient(180deg,var(--pink),var(--gold2) 100%);
+}
+
+.testimony-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   /* Controla el comportamiento de envoltura de elementos en un contenedor flexible */
+flex-wrap: wrap;
+/*
+   - wrap: Permite que los elementos flexibles se envuelvan en una nueva línea si no caben en el ancho del contenedor.
+*/
+
+}
+
+.testimony__card{
+    width: 30%;
+    height: 500px;
+    background:var(--pink);
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.testimony__img{
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.testimony__copy{
+    position: absolute;
+    bottom: 20px;
+    left: 5%;
+    width: 90%;
+    background: pink;
+    color: #fff;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: var(--shadow) var(--color_shadow);
+    padding: 15px 8px;
+    display: flex;
+    align-items: center;
+}
+
+.testimony__copy--modifier{
+    background: none;
+    box-shadow: none;
+}
+
+.testimony__logo{
+    font-size: 40px;
+    margin-right: 15px;
+    display: inline-block;
+}
+
+.testimony__name{
+    font-size: 24px;
+    line-height:28px;
+}
+
+.testimony__position{
+    color: var(--gray);
+}
+
+.testimony__text{
+    padding: 40px 0;
+    width: 90%;
+    margin: 0 auto;
+    color: #fff;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.cupkes__photo{
+    width: 100%;
+    border-radius: 10%;
+}
+
+
+.testimony__history{
+    font-size: 21px;
+    font-weight: 300;
+}
+
+
+.testimony__info{
+    width: 70%;
+}
+
+.logo--picture{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    object-position: center top;
+}
+
+/* check */
+
+.check{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.check__item{
+    width: 30%;
+    padding-right: 10px;
+    display: flex;
+    border-right: 2px solid var(--black2);
+}
+
+.bx-check{
+    background: linear-gradient(180deg, var(--black2) 0%, var(--black1) 100%);
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    margin-right: 20px;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 40px;
+}
+
+.check__number{
+    font-weight: 700;
+}
+
+.check__copy{
+    font-weight: 300;
+}
+.baner__conetc{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 50px;
+}
+.banner{
+    width: 90%;
+    height: 400px;
+    /*nos da la animacion que queremos*/
+    animation:banner 10s infinite linear alternate ;
+    background-size: 100% 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 12px solid var(--pink);
+ 
+}
+
+
+@keyframes banner{
+  0%,20%{
+    
+    background-image: url("https://images.hola.com/imagenes/cocina/tecnicas-de-cocina/20200428165637/como-decorar-cupcakes-galletas/0-811-184/como-decorar-cupcakes-galletas-t.jpg");
+  }
+  25%,45%{
+    background-image: url("https://canalcocina.es/medias/images/353.jpg");
+  }
+  50% , 70%{
+    background-image: url("https://res.cloudinary.com/riqra/image/upload/w_656,h_656,c_limit,q_auto,f_auto/v1664381217/sellers/panaderia-cafeteria-ciudad-de-los-ninos/products/r6kgsq6plsfipbelexys.png");
+  }
+  75% ,100%{
+    background-image: url("https://www.clarin.com/img/2021/04/29/9lAb2baoa_1200x630__1.jpg");
+  }
+
+}
+
+.capa{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(0, 0,0,0.6);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.info__baner{
+    z-index: 1;
+    width: 100%;
+    max-width: 550px;
+    text-align: center;
+;
+}
+.title__baner{
+ 
+ font-family: 'Pacifico', cursive;
+ color: aliceblue;
+ font-size: 50px;
+ }
+ .copy__baner{
+     color: aliceblue;
+     font-size: 20px; 
+     line-height:1.7;/*interlinead del texto*/
+     margin-bottom: 20px;
+    
+ }
+ 
+ 
+.link__baner{
+    background-color:var(--pink);
+    text-decoration: none;
+    color: rgb(247, 247, 247);
+    padding: 16px 29px;
+    border-radius: 10px;
+    display: inline-block;/*usamos el display para ver como queremos ver la visualizacion del elemento en otra pantalla*/
+}
+.footer{
+    background: #fafafa;
+}
+
+.footer__caption{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-evenly;
+}
+
+
+.title__footer{
+    font-size: 24px;
+    margin-bottom: 32px;
+    color: #f34970;
+}
+
+
+
+
+.footer__copy{
+    width: 100%;
+    color: var(--pink);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.copyright{
+    width: 100%;
+}
+
+.politica__privacidad{
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.politica__privacidad:hover{
+    text-decoration: underline;
+}
+
+.politica__privacidad--margin{
+    margin-right: 10px;
+}
+
+.get-email{
+    width: 50%;
+}
+
+.socialmedia{
+    margin-top: 24px;
+    display: flex;
+    color: var(--black2);
+}
+
+.socialmedia__icon{
+    font-size: 18px;
+    margin-right: 30px;
+    display: inline-block;
+}
+
+.socialmedia__legend{
+    color: var(--black2);
+    margin-right: 16px;
+}
+
+.contact{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    color: #fff;
+}
+
+.newsletter__input{
+    height:60px;
+    width: 200px;
+    border-radius: 6px;
+    padding: 5px 5px;
+    border: 1px solid rgb(182, 181, 181);
+}
+.newsletter__submit{
+    height:50px;
+    width: 200px;
+    border-radius: 6px;
+    border: 1px solid rgb(182, 181, 181);
+    background-color: var(--gold1);
+    margin-top: 20px;
+    color: white;
+}
+.inputs{
+    display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(2, 1fr);
+grid-column-gap: 2px;
+grid-row-gap: 20px;
+}
+.submit__newsletter{
+    display: flex;
+    justify-content: center;
+    
+}
+.item__contact{
+    width: 25%;
+    padding: 60px 0;
+    text-align: center;
+    background: linear-gradient(180deg, var(--pink) 0%, var(--gold2) 100%);
+
+}
+
+
+.item__contact--gold{
+    background: linear-gradient(180deg,var(--pink) 0%,white);
+    color: var(--gold1);
+}
+
+.contact__icon{
+    font-size: 14px;
+    color: var(--gold1);
+    line-height: 20px;
+    margin-right: 4px;
+}
+
+.contact__icon--modifier{
+    color: var(--gold1);
+}
+
+.contact__title{
+    font-size: 16px;
+    line-height: 20px;
+}

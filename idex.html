@@ -1,0 +1,268 @@
+<!--Especifica que estamos trabajando un documento HTML-->
+<!DOCTYPE html>
+<!--Especifica el lenguaje que la cual trabajaremos en el documento-->
+<html lang="en">
+<!--Especificamos las rutas de los archivos externos de nuestro proyecto web-->
+<head>
+    <!--Especificamos que nuestro documento permita caracteres especiales-->
+    <meta charset="UTF-8">
+    <!--Especificamos que nuestro contenido se visualice en diferentes dispositivos-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Especificamos el título de nuestro proyecto web-->
+    <title>Celestial Capcakes</title>
+    <!--Enlace a la hoja de estilos externa de Boxicons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!--Enlace a la hoja de estilos externa del CSS-->
+    <link rel="stylesheet" href="./css/style.css">
+    <!--link de animacion de css-->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <!--aca se inserta el favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+</head>
+<!--Especifica el contenido de nuestro sitio web-->
+<body>
+    <header class="hero">
+        <nav class="nav__hero">
+            <!--Navegación del encabezado-->
+            <div class="container nav__container">
+                <div class="logo">
+                    <h2 class="logo__name">Celestial <span class="point">Capcakes.</span></h2>
+                </div>
+                <!--Enlaces de navegación-->
+                <div class="links">
+                    <a href="#inicio" class="link">Inicio</a>
+                    <a href="#servicios" class="link">Servicios</a>
+                    <a href="#productos" class="link">productos</a>
+                    <a href="#clientes" class="link">Clientes</a>
+                    <a href="#contacto" class="link link--active">Contacto</a>
+                </div>
+            </div>
+        </nav>
+        <!--Sección principal del encabezado-->
+        <section class=" container hero__main " id="inicio">
+            <!--Textos y contenido destacado-->
+            <div class="hero__textos">
+                <h1 class="animate__animated animate__bounceInDown title">Donde cada bocado es un <span class="title--active">placer.</span></h1>
+                <p class="animate__animated animate__bounceInDown  copy">Nos complace<span class="copy__active"> antenderte</span></p>
+                <a href="#" class="animate__animated animate__bounceInDown cta">Contactanos</a>
+            </div>
+            <!--Imagén del encabezado-->
+
+            <img src="./img/png-transparent-brown-and-pink-cupcake-illustration-cupcake-watercolor-painting-illustration-rose-cake-cream-food-baking-thumbnail-removebg-preview.png"  class="animate__animated animate__bounceInDown mockup">
+        </section>
+    </header>
+    <!--Contenido Principal-->
+    <main>
+        <section class=" services">
+            <div class="container" id="servicios">
+                <h2 class="subtitle">Nuestros servicios<span class="point">.</span></h2>
+                <p class="copy__section">nuestros servicios te ayudaran a dare un poco de dulce en tu vida</p>
+            <!--Especifica que creará un contenedor para los articulos de los servicios-->
+            <article class="container-cards">
+                <div class="card">
+                    <img src="./img/Cupcakes-Personalizados-huaraz.jpg" class="card__img">
+                    <div class="cards__text">
+                        <p class="card__list">reposteria</p>
+                        <h3 class="card__title">personalizacion de cupckes<span class="point">.</span></h3>
+                        <p class="card__copy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi voluptate fuga beatae, quibusdam, quod inventore quisquam voluptatem debitis excepturi aperiam eum consequuntur porro deleniti possimus ipsam recusandae ipsum sed explicabo!</p>
+                        <a href="#" class="card__button">Reserva</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://i.pinimg.com/1200x/07/55/e3/0755e3ae516b974cc11829667feae37a.jpg" class="card__img">
+                    <div class="cards__text">
+                        <p class="card__list">eventos</p>
+                        <h3 class="card__title">Mesas de cupckes<span class="point">.</span></h3>
+                        <p class="card__copy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi voluptate fuga beatae, quibusdam, quod inventore quisquam voluptatem debitis excepturi aperiam eum consequuntur porro deleniti possimus ipsam recusandae ipsum sed explicabo!</p>
+                        <a href="#" class="card__button">Reserva</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://regalosmunakuy.pe/public/uploads/eab0d7e5f0e8faae0c5eb1d4cf37283301fddd4b88e4d18506ea3e209254beb4.jpeg" class="card__img">
+                    <div class="cards__text">
+                        <p class="card__list">Envios</p>
+                        <h3 class="card__title">Domicilios de cupckes<span class="point">.</span></h3>
+                        <p class="card__copy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi voluptate fuga beatae, quibusdam, quod inventore quisquam voluptatem debitis excepturi aperiam eum consequuntur porro deleniti possimus ipsam recusandae ipsum sed explicabo!</p>
+                        <a href="#" class="card__button">Reserva</a>
+                    </div>
+                </div>
+            </article>
+          </div>
+        </section>
+        <!--Especifica la información de nuestros proyectos-->
+        <section class="product container" id="productos">
+            <h2 class="subtitle">Nuestros productos mas virales<span class="point">.</span></h2>
+            <p class="copy__section">Estos son algunos productos de nuestro catalogo</p>
+            <article class="container-bg">
+                <div class="card">
+                    <div class="cards__text">
+                    <h3 class="card__title">Cupkes de disney<span class="point">.</span></h3>
+                    <p class="card__copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis reiciendis accusantium dicta quis natus qui voluptate aliquam dolores aut beatae eos a, rerum maiores autem provident soluta consequatur inventore expedita.</p>
+                    <a href="#" class="card__button">Reserva</a>
+                  </div>
+                </div>
+                <div class="background">
+                    <img src="https://i.pinimg.com/originals/76/ef/94/76ef947c0ab86b50c7a2f6e8cfeed5fc.jpg" class="background__img">
+                    <div class="background__text">
+                        <h3 class="background__title">personalizacion</h3>
+                        <p class="background__copy">personalizacion de tus cupkes con tus personajes favoritos</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cards__text">
+                    <h3 class="card__title">Cupkes para boda<span class="point">.</span></h3>
+                    <p class="card__copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis reiciendis accusantium dicta quis natus qui voluptate aliquam dolores aut beatae eos a, rerum maiores autem provident soluta consequatur inventore expedita.</p>
+                    <a href="#" class="card__button">Reserva</a>
+                  </div>
+                </div>
+                <div class="background">
+                    <img src="https://i.pinimg.com/1200x/e5/aa/e2/e5aae29bf238c684dd82ce4aa17b7d82.jpg" class="background__img">
+                    <div class="background__text">
+                        <h3 class="background__title">cupkes para tu bota</h3>
+                        <p class="background__copy">Personaliza tus cupkes para tu boda</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <!--Especifica la info de la sección de testimonios-->
+        <section class="testimony" id="clientes">
+            <div class="container">
+                <h2 class="subtitle">Clientes Satisfechos<span class="point">.</span></h2>
+                <p class="copy__section">Cientos de clientes confian en nosotros,hazlo tu tambien</p>
+
+                <div class="testimony-container">
+                    <div class="testimony__card">
+                        <img src="./img/istockphoto-1293448341-612x612.jpg" class="testimony__img">
+                        <div class="testimony__copy">
+                        
+                            <div class="testimony__info">
+                                <h3 class="testimony__name">ana roa</h3>
+                                <p class="testimony__position">Gerente de ecopetrol</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimony__card">
+                        <img src="./img/16018901726162.webp" class="testimony__img">
+                        <div class="testimony__copy">
+                            
+                            <div class="testimony__info">
+                                <h3 class="testimony__name">Maria melo</h3>
+                                <p class="testimony__position">madre de familia</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimony__card">
+                        <div class="testimony__text">
+                            <img src="https://http2.mlstatic.com/D_NQ_NP_663453-MPE48226678380_112021-O.webp" class="cupkes__photo">
+                            <p class="testimony__history">“hermosos cupkes muchas gracias”</p>
+                            <div class="testimony__copy testimony__copy--modifier">
+                                <img src="https://www.zankyou.com.mx/images/mag-card-c/4da/a5f7/414/400/-/mx/wp-content/uploads/2018/12/fotos-de-boda.png" class="testimony__logo logo--picture">
+                                <div class="testimony__info">
+                                    <h3 class="testimony__name">Luisa merchan</h3>
+                                    <p class="testimony__position">Novia </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!--seccion de contactanos y muestra de sus numeros en casos exitoso -->
+    <section class="email container container--modifier" id="contacto">
+        <h2 class="subtitle subtitle--modifier">Somos tu mejor opción para que tengas un momento muy dulce<span class="point">.</span></h2>
+
+        <p class="copy__section copy__section--modifier">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, et dolore id necessitatibus quibusdam rem accusamus fugiat doloremque voluptatibus eius!</p>
+
+        <div class="check">
+            <div class="check__item">
+                <i class='bx bx-check' ></i>
+                <div class="check__numbers">
+                    <p class="check__number">+3000</p>
+                    <p class="check__copy">clientes felices</p>
+                </div>
+            </div>
+            <div class="check__item">
+                <i class='bx bx-check' ></i>
+                <div class="check__numbers">
+                    <p class="check__number">+300</p>
+                    <p class="check__copy">cupkes vendidos</p>
+                </div>
+            </div>
+            <div class="check__item">
+                <i class='bx bx-check' ></i>
+                <div class="check__numbers">
+                    <p class="check__number">+400</p>
+                    <p class="check__copy">mesas de cupkes armadas</p>
+                </div>
+            </div>
+        </div>
+    <div class="baner__conetc">
+        <div class="banner">
+            <div class="capa">
+                <div class="info__baner">
+                    <h1 class="title__baner">cupkes</h1>
+                    <p class="copy__baner">Lorem ipsum dolor sit amet consectetur adipisicing elit.nobis alias  Porro, voluptate!</p>
+                    <a href="#" class="link__baner">Agenda</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<!--esta es el footer de la pagina -->
+<footer class="footer">
+    <div class="container footer__caption">
+       
+        <section class="get-email">
+            <h3 class="title__footer">¿Quieres contratar nuestros servicios?</h3>
+            <!--formulario de contacto para trabajar con nosotros-->
+            <form class="newsletter newsletter--modifier">
+                <div class="inputs">
+                <input type="text" class="newsletter__input" placeholder="ingresa tu mensaje">
+                <input type="text" class="newsletter__input" placeholder="ingresa tu gmail">
+                <input type="text" class="newsletter__input" placeholder="ingresa tu nombre">
+                <input type="number" class="newsletter__input" placeholder="ingresa tu numero">
+            </div>
+            <div class="submit__newsletter">
+                <input type="submit" class="newsletter__submit" value="contectanos">
+            </div>
+                
+            </form>
+            <div class="socialmedia">
+                <p class="socialmedia__legend">Siguenos en:</p>
+                <i class='socialmedia__icon bx bxl-facebook-circle'></i>
+                <i class='socialmedia__icon bx bxl-linkedin-square'></i>                                                                                                        
+                <i class='socialmedia__icon bx bxl-twitter' ></i>   
+                <i class='socialmedia__icon bx bxl-instagram' ></i>
+                <i class='socialmedia__icon bx bxl-github' ></i>  
+            </div>
+        </section>
+    </div>
+
+    <div class="contact">
+        <div class="item__contact">
+            <i class='bx bx-copyright contact__icon' ></i>
+            <h3 class="contact__title">Gisell Design</h3>
+        </div>
+        <div class="item__contact">
+            <i class='bx bx-mail-send contact__icon' ></i>
+            <h3 class="contact__title">hola@gisellcgdesign</h3>
+        </div>
+        <div class="item__contact">
+            <i class='bx bxs-edit-location contact__icon' ></i>
+            <h3 class="contact__title">Paseos de la reforma</h3>
+        </div>
+        <div class="item__contact item__contact--gold">
+            <i class='bx bxs-chat contact__icon contact__icon--modifier' ></i>
+            <h3 class="contact__title">Contactanos ahora</h3>
+        </div>
+    </div>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</footer>
+
+    </main>
+</body>
+</html>
